@@ -29,3 +29,17 @@ chmod +x scripts/start_jenkins.sh
 ---
 
 This Jenkins container supports running Docker-based builds using `docker-compose`.
+
+## 第一次啟動
+
+
+當 Jenkins server 第一次啟動時，會顯示解鎖畫面，要求輸入初始管理員密碼。
+
+打開 Jenkins UI：
+在瀏覽器輸入：http://localhost:8090
+
+到 Jenkins 容器中取出密碼：
+
+```bash
+docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
