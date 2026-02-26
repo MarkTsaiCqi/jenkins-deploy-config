@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile.jenkins
     container_name: jenkins
     user: root
+    environment:
+      - TZ=Asia/Taipei
     ports:
       - "8090:8080"
       - "50000:50000"
